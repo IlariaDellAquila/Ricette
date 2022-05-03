@@ -1,0 +1,26 @@
+<div id="card">
+    <button type="button" id="close" [routerLink]="['']">X</button>
+    <h1>Dettagli ricetta</h1>
+    <div id="dettagli">
+        <div id="parteSx">
+            <h1>{{dettagli?.descrizione}}</h1>
+            <h3>Procedimento</h3>
+            <section>{{dettagli?.procedimento}}
+            </section>
+            <img class="img" *ngFor="let dettaglio of dettagli?.imgs" src="{{dettaglio}}">
+
+
+        </div>
+        <div id="parteDx">
+
+            <h4>Ingredienti:</h4>
+            <p *ngFor="let dettaglio of dettagli?.ingredienti">{{dettaglio?.quantita}} - {{dettaglio?.descrizione}}</p>
+            <h4>Difficoltà:</h4><span>{{dettagli?.difficolta}}</span>
+
+        </div>
+
+    </div>
+    <button id="modifica" type="button" [routerLink]="['/upDate/' + dettagli?._id]"><b>Modifica</b></button>
+
+
+</div>

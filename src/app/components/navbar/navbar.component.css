@@ -1,0 +1,12 @@
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    cursor: pointer;
+    margin-left: 50px;
+    margin-top: 25px;
+    text-decoration: none;
+    color: black;
+}
